@@ -5,5 +5,5 @@ resource "aws_instance" "web1" {
 
 provider "aws" {
   region  = "us-east-1"  
-  version = "~> 2.0"
+  
 }
