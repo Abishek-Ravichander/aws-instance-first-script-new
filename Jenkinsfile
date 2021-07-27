@@ -48,7 +48,7 @@ pipeline {
 
            steps {
                script {
-                    def plan = readFile 'terraform/aws-instance-first-script/tfplan.txt'
+                    def plan = readFile 'terraform/aws-instance-first-script-new/tfplan.txt'
                     input message: "Do you want to apply the plan?",
                     parameters: [text(name: 'Plan', description: 'Please review the plan', defaultValue: plan)]
                }
@@ -57,7 +57,7 @@ pipeline {
 
         stage('Apply') {
             steps {
-                bat "cd&cd terraform/aws-instance-first-script & terraform apply -input=false tfplan"
+                bat "cd&cd terraform/aws-instance-first-script-new & terraform apply -input=false tfplan"
             }
         }
     }
