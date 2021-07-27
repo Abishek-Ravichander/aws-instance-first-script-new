@@ -39,21 +39,7 @@ pipeline {
                 bat 'cd&cd terraform/aws-instance-first-script-new & terraform show -no-color tfplan > tfplan.txt'
             }
         }
-        stage('Approval') {
-           when {
-               not {
-                   equals expected: true, actual: false
-               }
-           }
-
-           steps {
-               script {
-                    def plan = readFile 'terraform/aws-instance-first-script-new/tfplan.txt'
-                    input message: "Do you want to apply the plan?",
-                    parameters: [text(name: 'Plan', description: 'Please review the plan', defaultValue: plan)]
-               }
-           }
-       }
+       
 
         stage('Apply') {
             steps {
