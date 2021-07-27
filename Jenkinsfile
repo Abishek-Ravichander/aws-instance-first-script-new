@@ -24,7 +24,7 @@ pipeline {
                  script{
                         dir("terraform")
                         {
-                            git "https://github.com/Abishek-Ravichander/aws-instance-first-script.git"
+                            git "https://github.com/Abishek-Ravichander/aws-instance-first-script-new.git"
                         }
                     }
                 }
