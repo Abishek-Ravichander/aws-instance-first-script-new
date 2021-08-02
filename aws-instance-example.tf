@@ -10,7 +10,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "example" {
-  name        = "allow_tls"
+  name        = "allow_tls_1"
   description = "Allow TLS inbound traffic"
   
 
