@@ -1,5 +1,5 @@
 resource "aws_instance" "web1" {
-   count = 2
+   count = 1
    ami           = "ami-035b3c7efe6d061d5"
    instance_type = "t2.micro"    
  }
