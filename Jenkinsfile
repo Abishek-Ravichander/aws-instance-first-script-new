@@ -33,8 +33,8 @@ pipeline {
         stage('Plan') {
             steps {
                 bat 'cd&cd terraform/aws-instance-first-script-new & terraform init -input=false'
-                bat 'cd&cd terraform/aws-instance-first-script-new & terraform workspace new terraform_12'
-                bat 'cd&cd terraform/aws-instance-first-script-new & terraform workspace select terraform_12'
+                bat 'cd&cd terraform/aws-instance-first-script-new & terraform workspace new terraform_13'
+                bat 'cd&cd terraform/aws-instance-first-script-new & terraform workspace select terraform_13'
                 bat "cd&cd terraform/aws-instance-first-script-new & terraform plan -input=false -out tfplan "
                 bat 'cd&cd terraform/aws-instance-first-script-new & terraform show -no-color tfplan > tfplan.txt'
             }
